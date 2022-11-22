@@ -18,10 +18,8 @@ const Home = () => {
     getUsers();
   }, []);
 
-  console.log("data", data);
-
+  console.log("users", data);
   const list = data;
-
   return (
     <>
       <div>
