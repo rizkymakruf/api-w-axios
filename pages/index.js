@@ -18,7 +18,6 @@ const Home = () => {
     getUsers();
   }, []);
 
-  console.log("hihi", data);
   const list = data;
   return (
     <>
