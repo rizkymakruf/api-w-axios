@@ -2,8 +2,9 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 const Home = () => {
+  // set data
   const [data, setData] = useState([]);
-
+  // fetch data API with axios
   const getUsers = async () => {
     try {
       const result = await axios(`https://jsonplaceholder.typicode.com/users`);
@@ -13,12 +14,13 @@ const Home = () => {
       console.log(error);
     }
   };
-
+  // call function
   useEffect(() => {
     getUsers();
   }, []);
-
+  // log data
   console.log("hihi", data);
+  // initial
   const list = data;
   return (
     <>
