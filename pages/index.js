@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 const Home = () => {
-  const [data, setData] = useState();
+  const [data, setData] = useState([]);
 
   const getUsers = async () => {
     try {
@@ -16,14 +16,14 @@ const Home = () => {
 
   useEffect(() => {
     getUsers();
-  }, []);
+  });
 
-  console.log("data", data);
+  console.log("hihi", data);
   const list = data;
   return (
     <>
       <div>
-        <div className="w-full px-5 md:px-20 py-8 bg-[#285430] flex items-center gap-3 fixed top-0">
+        <div className="w-full px-6 md:px-20 py-10 bg-green-800/50 flex items-center gap-3 fixed top-0">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -39,9 +39,9 @@ const Home = () => {
           </svg>
           <p className="text-white text-2xl font-semibold">Data Users</p>
         </div>
-        <div className="w-full mt-20 px-10 md:px-32 py-10 space-y-3">
+        <div className="w-full mt-24 px-10 md:px-32 py-10 space-y-2">
           {list.map((x, index) => (
-            <div className="w-full py-5 px-3 bg-[#A4BE7B]/50" key={index}>
+            <div className="w-full py-5 px-3 bg-green-800/20" key={index}>
               {x.name}
             </div>
           ))}
