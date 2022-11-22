@@ -18,7 +18,7 @@ const Home = () => {
     getUsers();
   }, []);
 
-  console.log("users", data);
+  console.log("data", data);
   const list = data;
   return (
     <>
