@@ -16,7 +16,7 @@ const Home = () => {
 
   useEffect(() => {
     getUsers();
-  });
+  }, []);
 
   console.log("hihi", data);
   const list = data;
