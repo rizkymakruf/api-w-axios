@@ -6,7 +6,7 @@ const Home = () => {
 
   const getUsers = async () => {
     try {
-      const result = axios(`https://jsonplaceholder.typicode.com/users`);
+      const result = await axios(`https://jsonplaceholder.typicode.com/users`);
       setData(result.data);
       return result;
     } catch (error) {
