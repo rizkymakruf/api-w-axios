@@ -19,10 +19,11 @@ const Home = () => {
   }, []);
 
   console.log("hihi", data);
+  const list = data;
   return (
     <>
       <div>
-        <div className="w-full px-20 py-10 bg-green-800/50 flex items-center gap-3">
+        <div className="w-full px-5 md:px-20 py-8 bg-[#285430] flex items-center gap-3 fixed top-0">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -37,6 +38,13 @@ const Home = () => {
             <path d="M5.082 14.254a8.287 8.287 0 00-1.308 5.135 9.687 9.687 0 01-1.764-.44l-.115-.04a.563.563 0 01-.373-.487l-.01-.121a3.75 3.75 0 013.57-4.047zM20.226 19.389a8.287 8.287 0 00-1.308-5.135 3.75 3.75 0 013.57 4.047l-.01.121a.563.563 0 01-.373.486l-.115.04c-.567.2-1.156.349-1.764.441z" />
           </svg>
           <p className="text-white text-2xl font-semibold">Data Users</p>
+        </div>
+        <div className="w-full mt-20 px-10 md:px-32 py-10 space-y-3">
+          {list.map((x, index) => (
+            <div className="w-full py-5 px-3 bg-[#A4BE7B]/50" key={index}>
+              {x.name}
+            </div>
+          ))}
         </div>
       </div>
     </>
