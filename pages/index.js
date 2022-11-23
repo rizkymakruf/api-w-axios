@@ -7,7 +7,7 @@ const Home = () => {
   // fetch data API with axios
   const getUsers = async () => {
     try {
-      const result = await axios(`https://jsonplaceholder.typicode.com/users`);
+      const result = await axios(`${process.env.API_ENDPOINT}users`);
       setData(result.data);
       return result;
     } catch (error) {
